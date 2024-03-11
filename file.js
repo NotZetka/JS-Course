@@ -1,6 +1,5 @@
-console.log("hello world from vscode")
-
-{
-    let user = "asd"
-    console.log(user)
+function test(hello){
+    console.log(hello)
 }
+
+test("helllo")
