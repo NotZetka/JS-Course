@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>objects</title>
+</head>
+<body>
+    <script>
+        let product = {
+            name : 'basketball',
+            price : 2095
+        };
+        let product2 = {
+            name : 'football',
+            price : 2195
+        };
+        console.log(product)
+        product.price += 500
+        product['delivery-time']='3 days'
+        product['delivery-time']='3 days'
+        console.log(product)
+
+        console.log(compareProduct(product,product2));
+        console.log(isSameProduct(product,product2));
+
+        console.log('Good Morning'.toLowerCase())
+        console.log('test'.repeat(2))
+
+        function compareProduct(product1,product2){
+            return product1.price<product2.price ? product1 : product2;
+        }
+
+        function isSameProduct(product1,product2){
+            return (product1.name===product2.name && product1.price === product2.price)
+        }
+    </script>
+</body>
+</html>
