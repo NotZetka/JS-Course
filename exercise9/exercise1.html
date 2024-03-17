@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>ex1</title>
+</head>
+<body>
+    <button onclick="changeText('heads')">heads</button>
+    <button onclick="changeText('tails')">tails</button>
+    <P></P>
+    <input placeholder="enter your name" class="inputName"
+    onkeydown="
+    console.log(event.key);
+    if (event.key === 'Enter'){
+        changeSecondText(name.value);
+    }">
+    <button onclick="
+        changeSecondText(name.value);" 
+    >Submit
+    </button>
+    <P class="secondtext"></P>
+    <script>
+        function changeText(input){
+            document.querySelector('p').innerText= `You choose: ${input}`;
+        }
+        
+        function changeSecondText(){
+            let name = document.querySelector('.inputName').value;
+            document.querySelector('.secondtext').innerText= `Your name is: ${name}`;
+            document.querySelector('.inputName').value = '';
+        }
+    </script>
+</body>
+</html>
